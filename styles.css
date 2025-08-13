@@ -1,0 +1,439 @@
+:root {
+    --text-color: #0145f2;
+    --link-color: #3770bf;
+    --background-color: #edf1f5;
+    /*--background-color: linear-gradient(#f9cbd6,#f2e0d2 );*/
+}
+
+/*body{
+    background: var(--background-color);
+    margin: 0;
+    background-size: cover;
+}*/
+
+.carousel {
+  width: 100%;
+  max-width: 600px;
+  margin: 20px auto;
+  overflow: hidden;
+  position: relative;
+  border-radius: 10px;
+}
+
+.slides {
+  display: flex;
+  width: 500%;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  width: 20%;
+  flex-shrink: 0;
+}
+
+.slide img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  border-radius: 10px;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+/*Navbar carrousel*/
+.navigation {
+  position: absolute;
+  width: 100%;
+  bottom: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.bar {
+  width: 15px;
+  height: 15px;
+  border: 2px solid white;
+  margin: 5px;
+  border-radius: 50%;
+  cursor:pointer;
+  transition: 0.3s;
+}
+
+.bar:hover {
+  background: white;
+}
+
+/* auto photo change*/
+/* Carrossel 1 */
+#img-1:checked ~ .slides { transform: translateX(0%); }
+#img-2:checked ~ .slides { transform: translateX(-20%); }
+#img-3:checked ~ .slides { transform: translateX(-40%); }
+#img-4:checked ~ .slides { transform: translateX(-60%); }
+#img-5:checked ~ .slides { transform: translateX(-80%); }
+
+/* Carrossel 2 */
+#img-1-2:checked ~ .slides { transform: translateX(0%); }
+#img-2-2:checked ~ .slides { transform: translateX(-20%); }
+#img-3-2:checked ~ .slides { transform: translateX(-40%); }
+#img-4-2:checked ~ .slides { transform: translateX(-60%); }
+#img-5-2:checked ~ .slides { transform: translateX(-80%); }
+
+
+/* Carrossel 3 */
+#img-1-4:checked ~ .slides { transform: translateX(0%); }
+#img-2-4:checked ~ .slides { transform: translateX(-20%); }
+#img-3-4:checked ~ .slides { transform: translateX(-40%); }
+#img-4-4:checked ~ .slides { transform: translateX(-60%); }
+#img-5-4:checked ~ .slides { transform: translateX(-80%); }
+
+
+
+.indented {
+  text-indent: 30px;
+  margin-bottom: 1em;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'poppins', sans-serif;
+    background-color: var(--background-color);
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+a{
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+/*Barra de navegação*/
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 50px;
+    height: 80px;
+}
+
+nav .left a {
+    color: var(--text-color);
+    font-size: 22px;
+    font-weight: 600;
+}
+
+nav .right a {
+    color: var(--text-color);
+    margin: 0 10px;
+}
+
+nav .right a:last-child {
+    color: var(--background-color);
+    background-color: var(--text-color);
+    padding: 5px 15px;
+    border-radius: 5px;
+    
+}
+
+nav .right a span{
+    margin-left: 5px;
+}
+
+/*Section1:hero*/
+.hero-section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    margin: 50px 0;
+    margin-bottom: 100px;
+    gap: 40px;
+}
+
+.hero-section .text{
+    flex: 5;
+}
+
+.hero-section .text h2{
+    font-size: 45px;
+    color: var(--text-color);
+}
+
+.hero-section .text p{
+    color: var(--text-color);
+}
+
+.hero-section .text .links{
+    margin-top: 25px;
+}
+
+.hero-section .text .links a{
+    display: inline-block;
+    padding: 5px 10px;
+    border: 2px solid var(--link-color);
+    border-radius: 5px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    transition: .1s;
+}
+
+.hero-section .text .links a:hover{
+    color: var(--text-color);
+    border: 2px solid var(--text-color);
+}
+
+
+.hero-section .headshot{
+    flex: 2;
+    display: flex;
+    justify-content: right;
+}
+
+.hero-section .headshot img{
+    border-radius: 50%;
+    width: 350px;
+}
+
+/*section 2:skills*/
+.skills-section{
+    padding: 0 50px;
+    margin-bottom: 100px;
+}
+
+.skills-section h2{
+    text-align: center;
+    font-size: 35px; 
+    color: var(--text-color);
+}
+
+.skills-section .text{
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--text-color);
+}
+
+.skills-section .cells{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.skills-section .cells .cell{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: var(--text-color);
+
+    width: 200px;
+    padding: 10px 20px;
+    margin: 10px;
+    border: 1.5px solid var(--text-color);
+    border-radius: 5px;
+}
+
+.skills-section .cells .cell img{
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    border-radius: 2px;
+}
+
+.skills-section .cells .cell span{
+    font-size: 18px;
+}
+
+/*Section 3:Testimony*/
+.aboutme-section{
+    padding: 0 50px;
+    margin-bottom: 100px;
+}
+.aboutme-section h2{
+    font-size: 35px;
+    margin-bottom: 30px;
+    color: var(--text-color);
+}
+
+.aboutme-section .group{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.aboutme-section .group .person-details{
+    text-align: center;
+    flex: 2;
+    color: var(--text-color);
+}
+.aboutme-section .group .text{
+    color: var(--text-color);
+}
+
+.aboutme-section .group .person-details img{
+    width: 300px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.aboutme-section .group .person-details p{
+    font-weight: 600;
+}
+
+.aboutme-section .group .person-details p:last-child{
+    font-weight: normal;
+}
+
+.aboutme-section .group .text{
+    flex: 8;
+}
+
+/*Section 4: contact*/
+.contact-section{
+    padding: 0 50px;
+    margin-bottom: 100px;
+    color: var(--text-color);
+}
+
+.contact-section h2{
+    font-size: 35px;
+    color: var(--text-color);
+}
+
+.contact-section .group{
+    display: flex;
+    gap: 50px;
+}
+
+.contact-section .group .text{
+    flex: 3;
+    margin-top: 20px;
+}
+
+.contact-section .group form{
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-section .group form input,
+.contact-section .group form textarea{
+    font-family: 'poppins', sans-serif;
+    border: 2px solid var(--link-color);
+    background-color: transparent;
+    padding: 10px;
+    margin-bottom: 15px;
+    outline: none;
+    resize: none;
+}
+
+.contact-section .group form button{
+    font-size: 16px;
+    font-family: 'poppins', sans-serif;
+    color: #fff;
+    background-color: var(--link-color);
+    border: none;
+    height: 50px;
+    cursor: pointer;
+    transition: .1s;
+}
+
+.contact-section .group form button:hover{
+    filter: brightness(.8);
+}
+
+@media (max-width: 850px){
+    /*section 1:hero*/
+    .hero-section .text h2{
+        font-size: 35px;
+    }
+}
+
+@media (max-width: 740px){
+    /*section 1:hero*/
+    .hero-section{
+        flex-direction: column-reverse;
+    }
+
+    .hero-section .headshot img {
+        width: 300px;
+    }
+    /*Section 3 :Testimony*/
+    .testimony-section{
+        text-align: center;
+    }
+
+    .testimony-section .group{
+        flex-direction: column;
+    }
+    /*section 4: contact*/
+    .contact-section .group{
+        flex-direction: column;
+    }
+}
+    
+
+
+@media (max-width: 600px){
+
+    /*Barra de navegação*/
+    nav { padding: 0 20px;
+    }
+
+    nav .right a {
+        font-size: 22px;
+    }
+
+    nav .right a:last-child {
+        color: var(--text-color);
+        background-color: transparent;
+        padding: 0;
+    }
+    nav .right a span {
+        display: none;
+    }
+
+    /*section 1:hero*/
+    .hero-section{
+        padding: 0 20px;
+    }
+
+    .hero-section .text h2{
+        font-size: 30px;
+    }
+    
+    /*section 2:Skills*/
+    .skills-section{
+        padding: 0 20px;
+    }
+
+    .skills-section .cells .cell span{
+        font-size: 16px;
+    }
+
+    /*section 3: testimony*/
+    .testimony-section{
+        padding: 0 20px;
+    }
+
+
+    /*section 4: contact*/
+    .contact-section{
+        padding: 0 20px;
+    }
+}
+
