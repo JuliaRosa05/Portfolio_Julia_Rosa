@@ -437,3 +437,39 @@ nav .right a span{
     }
 }
 
+@media (max-width: 850px) {
+    .aboutme-section .group {
+        gap: 30px;
+    }
+    .aboutme-section .group .person-details img {
+        width: 220px;
+    }
+    .aboutme-section .group .text {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 740px) {
+    .aboutme-section .group {
+        flex-direction: column;
+        text-align: center;
+    }
+    .aboutme-section .group .person-details img {
+        width: 200px;
+    }
+}
+
+@media (max-width: 500px) {
+    .aboutme-section h2 {
+        font-size: 28px;
+    }
+    .aboutme-section .group .person-details img {
+        width: 180px;
+    }
+    .aboutme-section .group .text {
+        font-size: 0.95rem;
+        line-height: 1.4;
+    }
+}
+
+
